@@ -7,7 +7,7 @@ from langchain.embeddings import OpenAIEmbeddings
 import pickle
 import os
 
-#TODO read secrets
+#TODO #2 read secrets
 # openai.api_key = os.environ["OPENAI_API_KEY"]
 # ingest_dir = os.environ["INGEST_DIR"]
 # print("Ingesting data from: \n")
@@ -18,6 +18,7 @@ ps = list(Path('subgraph-test/').glob("**/*.md"))
 
 data = []
 sources = []
+#TODO #1 remove empty files
 for p in ps:
     with open(p) as f:
         data.append(f.read())
