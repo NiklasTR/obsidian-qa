@@ -1,7 +1,8 @@
-FROM alpine:latest
+FROM ubuntu:latest
 
 # Update and install dependencies
-RUN apk update && apk upgrade
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install -y python3-pip python3-dev
 
 # Set working directory
 WORKDIR /app
@@ -10,6 +11,7 @@ WORKDIR /app
 COPY . .
 
 # Install any additional requirements
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip3 install -r requirements.txt
 
+# run container
 CMD ["bash"]
