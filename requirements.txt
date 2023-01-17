@@ -3,4 +3,3 @@ openai
 faiss-cpu
 streamlit
 streamlit-chat
-tiktoken
