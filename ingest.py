@@ -14,7 +14,7 @@ import os
 # print(ingest_dir)
 
 # Here we load in the data in the format that Notion exports it in.
-ps = list(Path('subgraph-test/').glob("**/*.md"))
+ps = list(Path('../subgraph/projects/cgas').glob("**/*.md"))
 
 data = []
 sources = []
