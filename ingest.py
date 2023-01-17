@@ -7,15 +7,14 @@ from langchain.embeddings import OpenAIEmbeddings
 import pickle
 import os
 
-# read secrets
-#openai.api_key = os.environ["OPENAI_API_KEY"]
-ingest_dir = os.environ["INGEST_DIR"]
-
-print("Ingesting data from: \n")
-print(ingest_dir)
+#TODO read secrets
+# openai.api_key = os.environ["OPENAI_API_KEY"]
+# ingest_dir = os.environ["INGEST_DIR"]
+# print("Ingesting data from: \n")
+# print(ingest_dir)
 
 # Here we load in the data in the format that Notion exports it in.
-ps = list(Path().glob("**/*.md"))
+ps = list(Path('subgraph-test/').glob("**/*.md"))
 
 data = []
 sources = []
